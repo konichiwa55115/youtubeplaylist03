@@ -31,6 +31,4 @@ async def playlist_down(bot, message):
              os.remove(PLAYLIST_VID)
             
                
-        await m.delete()
-
 
