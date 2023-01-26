@@ -22,7 +22,7 @@ async def playlist_down(bot, message):
     p = Playlist(link)
     chat_id = message.chat.id
     length_of_playlist = str(p.length)
-    extend = int(length_of_playlist) + 1
+    extend = int(length_of_playlist) 
     i = 1
     m = await bot.send_message(message.chat.id, f"Downloading {p.title}\n\n0 completed of {length_of_playlist}")
     for x in range(extend):
