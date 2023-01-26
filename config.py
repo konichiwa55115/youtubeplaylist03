@@ -9,6 +9,6 @@
 import os
 
 class Config(object):
-    API_ID = int(os.environ.get("API_ID", 12345678))
-    API_HASH = os.environ.get("API_HASH")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN")
+    API_ID = int(17983098)
+    API_HASH = "ee28199396e0925f1f44d945ac174f64"
+    BOT_TOKEN = "5271777330:AAH5Psr--moCkYoFJIX-_wyPQZTmhAstFRE"
