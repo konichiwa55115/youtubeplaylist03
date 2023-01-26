@@ -29,6 +29,10 @@ async def playlist_down(bot, message):
          try:
              await bot.send_video(chat_id=chat_id, video=PLAYLIST_VID, caption=video.title)
              os.remove(PLAYLIST_VID)
+          except Exception as ee:
+                await bot.send_message(chat_id, f"Something happened!\n{ee}")
+    await m.delete()
+
             
                
 
