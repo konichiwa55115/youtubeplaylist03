@@ -1,4 +1,5 @@
 pyrogram
+tgcrypto
 pytube
 youtube-search-python
 Flask==2.2.2
