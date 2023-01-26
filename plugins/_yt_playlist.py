@@ -27,7 +27,7 @@ async def playlist_down(bot, message):
     m = await bot.send_message(message.chat.id, f"Downloading {p.title}\n\n0 completed of {length_of_playlist}")
     for x in range(extend):
         for video in p.videos:
-            PLAYLIST_VID = video.streams.get_lowest_resolution().download()
+            PLAYLIST_VID = video.streams.get_highest_resolution().download()
             try:
                 await bot.send_video(chat_id=chat_id, video=PLAYLIST_VID, caption=p.title)
                 os.remove(PLAYLIST_VID)
@@ -38,8 +38,7 @@ async def playlist_down(bot, message):
                 if int(i) == int(length_of_playlist):
                     await m.delete()
                     await bot.send_message(message.chat.id, f"Downloaded successfully!\n\n{str(i)} completed of {length_of_playlist}")
-                else:
-                    await m.edit_text(f"Downloading {p.title}...\n\n{str(i)} completed of {length_of_playlist}")
+               
             except MessageIdInvalid:
                 pass
         await m.delete()
